@@ -3,6 +3,7 @@ v1 - Program Setup
     - Import and Initialise the Pygame module
     - Screen window
     - Image imports
+    - Window name
 """
 
 import pygame
@@ -11,6 +12,9 @@ pygame.init()
 icon = pygame.image.load("game_icon.png")
 
 screen = pygame.display.set_mode((1100, 550))
+pygame.display.set_icon(icon)
+
+pygame.display.set_caption("Racing Game - Jade")
 
 font = pygame.font.SysFont("",40) # placeholder for text
 test_text = font.render(f"Testing, testing 123", True, (255, 255, 255))
@@ -22,8 +26,6 @@ car3 = pygame.image.load("car_3.png")
 car4 = pygame.image.load("car_4.png")
 car5 = pygame.image.load("car_5.png")
 car6 = pygame.image.load("car_6.png")
-
-pygame.display.set_icon("game_icon.png")
 
 def game_loop():
     quit_game = False
